@@ -1,0 +1,76 @@
+body{
+    position: absolute;
+    width: 100%; height: 100%;
+    background-color: transparent;
+    display: flex; justify-content: center; align-items: center;
+}
+
+.contenedor{
+    position: absolute;
+    width: fit-content; height: fit-content;
+    border: solid black 1px;
+    padding: 10px;
+}
+
+.contenedor_interior{
+    background-color: transparent;
+    width: 325px; height: 325px;
+}
+
+.cuadraditos{
+    position: absolute;
+    width: 100px; height: 100px;
+    border: solid black 1px;
+}
+
+.cuadraditos:nth-of-type(n+4){
+    background-color: green;
+}
+
+.cuadraditos:nth-of-type(n+6){
+    background-color: blue;
+}
+
+#a{
+
+}
+
+#b{
+    left: 120px;
+    display: none;
+}
+
+#c{
+    left: 230px;
+}
+
+#d{
+    top: 120px;
+}
+
+#e{
+    top: 120px;
+    left: 120px;
+    display: none;
+}
+
+#f{
+    top: 120px;
+    left: 230px;
+}
+
+#g{
+    top: 230px;
+}
+
+#h{
+    top: 230px;
+    left: 120px;
+    display: none;
+}
+
+#i{
+    top: 230px;
+    left: 230px;
+    display: none;
+}

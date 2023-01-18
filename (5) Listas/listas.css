@@ -1,0 +1,49 @@
+h1 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #123D43;
+	text-decoration: underline;
+	text-align: right;
+	cursor: text;
+	margin-right: 10%;
+	text-shadow: 3px 3px 2px #789498;
+}
+
+li::before{
+	content: url(imgs/vineta_circle1.png);
+}
+
+ul.redes li {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	font-style: italic;
+	
+	color: #442A5D;
+}
+
+li{
+	list-style: none;
+}
+
+p.titulo {
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	background-color: #F9DDC3;
+	color: #6E431C;
+}
+
+p.titulo::first-letter{
+	font-weight: bold;
+} 
+
+#otraasignatura {
+	background-color: #CEA885;
+	width: 6em;
+	text-align: center;
+	height: 1.5em;
+	vertical-align: middle;
+}
+
+#otraasignatura:hover{
+	font-weight: bold;
+	color: #FFF;
+}

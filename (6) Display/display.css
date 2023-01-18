@@ -1,0 +1,43 @@
+* { /* Todos los elementos de la página tienen borde */
+    border: thin solid #442A5D;
+}
+
+/* Del resto hay que crear clases por cada párrafo, en función de la propiedad display */
+
+.enlinea{
+    display: inline;
+    color:red;
+}
+
+.bloqueenlinea{
+    display: inline-block;
+    height: 100px;
+    padding-right: 50px;
+}
+
+.lista{
+    margin-left: 50px;
+    display: list-item;
+    list-style: square;
+}
+
+.displayNone{
+    display: none;
+}
+
+.tableCell{
+    display: table-cell;
+}
+
+.posicionRelativa{
+    position: relative;
+    top:20px; right: 20px;
+}
+
+.posicionEstatica{
+    position: static;
+}
+
+#negrita{
+    display: block;
+}

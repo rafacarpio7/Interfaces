@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 01</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 600px;
+            height: 300px;
+            background-color: lightgrey;
+            border-radius: 5px;
+            box-shadow: 0 0 5px black;
+            padding: 10px;
+
+            /* Añade estilos a partir de aquí (si es necesario) */
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: baseline;
+            column-gap: 10px;
+            
+        }
+
+        .item {
+            font-size: 50px;
+            font-weight: bold;
+            border: 10px solid;
+            border-radius: 5px;
+            background-color: white;
+            min-height: 100px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Añade estilos a partir de aquí (si es necesario) */
+            
+        }
+
+
+        div.contenedor div:nth-child(1){
+            align-self: flex-end;
+            order: 7;
+            flex-grow: 1;
+            
+        }
+        div.contenedor div:nth-child(2){
+            align-self: flex-end;
+            order: 10;
+            flex-grow: 1;
+        }
+        div.contenedor div:nth-child(3){
+            align-self: center;
+            order: 6;
+            flex-grow: 1;
+        }
+        div.contenedor div:nth-child(4){
+            align-self: center;
+            order: 9;
+            flex-grow: 1;
+        }
+        div.contenedor div:nth-child(5){
+            align-self: flex-start;
+            order: 5;
+            flex-grow: 1;
+        }
+        div.contenedor div:nth-child(6){
+            align-self: flex-start;
+            order: 8;
+            flex-grow: 1;
+        }
+
+
+        /* Añade estilos a partir de aquí (si es necesario) */
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+</body>
+
+</html>

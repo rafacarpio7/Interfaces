@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 02</title>
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        body {
+            padding: 20px;
+        }
+
+        .contenedor {
+            width: 600px;
+            height: 600px;
+            background-color: lightgrey;
+            border-radius: 5px;
+            box-shadow: 0 0 5px black;
+            padding: 10px;
+            gap: 10px;
+
+            /* Añade estilos a partir de aquí (si es necesario) */
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .item {
+            font-size: 50px;
+            font-weight: bold;
+            border: 10px solid;
+            border-radius: 5px;
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            /* Añade estilos a partir de aquí (si es necesario) */
+            margin-left: 30px;
+        }
+
+        div.contenedor div:nth-child(1){
+            order: 9;
+        }
+        div.contenedor div:nth-child(2){
+            order: 10;
+        }
+        div.contenedor div:nth-child(3){
+            order: 7;
+        }
+        div.contenedor div:nth-child(4){
+            order: 8;
+        }
+
+        /* Añade estilos a partir de aquí (si es necesario) */
+    </style>
+</head>
+
+<body>
+    <div class="contenedor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+    </div>
+</body>
+
+</html>

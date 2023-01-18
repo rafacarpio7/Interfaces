@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejercicio 1 de Flexbox</title>
+  <style>
+    /*.test {
+      background-color: aqua;
+      display: flex;
+    }
+
+    .flexend1{
+      padding: 20px;
+      flex-direction: row;
+      display: flex;
+
+      align-items: flex-end;
+    }
+
+    li{
+      background-color: chocolate;
+      display: flex;
+      color: white;
+      font-weight: bold;
+      list-style-type: none;
+      width: 100px;
+      height: 50px;
+      line-height: 120px;
+      text-align:center;
+      margin: 5px;
+
+
+    }
+    li{
+      width: 100px;
+      height: 100px;
+      align-items: center;
+      background-color: chocolate;
+    }*/
+    .test{
+      border: 0.5px solid black;
+    }
+    body {
+      background-color: aquamarine;
+      font-family: sans-serif;
+    }
+    ul, li {
+      padding: 0; 
+      list-style: none;
+    }
+    ul {
+      display: flex;
+      margin: 10px;
+      margin-top: 0;
+      background-color: aquamarine;
+      justify-content: space-between;
+      height: 100px;
+    }
+    li {
+      display: block;
+      width: 18%;
+      height: 70px;
+      background-color: orangered;
+      line-height: 70px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+      
+    }
+    .flexend1 {
+      align-items: flex-end;
+    }
+
+    .flexend2 {
+      align-items: flex-end;
+      flex-direction: row-reverse;
+    }
+
+  </style>
+  
+  <link rel="stylesheet" href="./Ejercicio 1.css">
+</head>
+<body>
+  <div class="test">    
+    <ul class="flexend1">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+  
+  <div class="test">    
+	<ul class="flexend2">
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+      <li>5</li>
+    </ul>
+  </div>
+  
+</body>
+</html>

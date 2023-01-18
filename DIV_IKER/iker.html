@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .ejercicio2{
+            width: 100px; height: 100px;
+            border-width: 5px 5px;
+            border-style: solid;
+            border-image: linear-gradient(45deg, turquoise, greenyellow) 1;
+            margin-bottom: 10px;
+        }
+        .ejercicio3{
+            width: 100px; height: 100px;
+            border-width: 5px 5px;
+            border-style: solid;
+            border-image: linear-gradient(to bottom, turquoise, greenyellow) 1 0;
+            margin-bottom: 10px;
+        }
+
+        .ejercicio4 {
+            width: 100px; height: 100px;
+            border-width: 5px 5px;
+            border-style: solid;
+            border-image: linear-gradient(to bottom, turquoise, greenyellow) 0 100%;
+            margin-bottom: 10px;
+        }
+
+        .ejercicio5{
+            flex-shrink: 0;
+            margin: 20px;
+            height: calc(150px + 6vw);
+            width: calc(150px + 6vw);
+            border: calc(8px + 0.2vw) solid transparent;
+            background-origin: border-box;
+            background-clip: content-box,border-box;
+            background-size: cover;
+            box-sizing: border-box;
+            box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
+            border-radius: 50% 10%;
+            background-image: url(http://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=350&h=350&fit=crop&crop=faces),linear-gradient(to bottom left, #f83600,#f9d423);
+        }
+
+        .ejercicio6{
+            border: 2px dashed rgba(255,255,255,.4);
+            width: 100px;
+            height: 100px;
+            background: #FF0099;
+            background-image: linear-gradient(45deg,#3023AE 0%,#FF0099 100%);
+            border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+            box-shadow: -0.1px 0.1px #ffffff12;
+        }
+
+        .ejercicio7{
+            width: 100px; height: 100px;
+            border-width: 10px 10px;
+            border-style: solid;
+            border-color: rosybrown purple  red orange;
+        }
+    </style>
+</head>
+<body>
+    <div class="ejercicio1"></div>
+    <div class="ejercicio2"></div>
+    <div class="ejercicio3"></div>
+    <div class="ejercicio4"></div>
+    <div class="ejercicio5"></div>
+    <div class="ejercicio6"></div>
+    <div class="ejercicio7"></div>
+</body>
+</html>

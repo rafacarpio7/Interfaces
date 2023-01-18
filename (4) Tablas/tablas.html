@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Ejercicio formatear tabla</title>
+	<style>
+		/* Añadir estilos de tablas */
+		table {
+			border: 1px solid #000;
+			border-collapse: collapse;
+			position: relative;
+			width: 500px;
+			height: 500px;
+			table-layout: auto;
+		}
+		th{
+			border: 1px solid #000;
+		}
+
+		td {
+			border: 1px solid #555;
+		}
+		tr{
+			border: 1px solid #000;
+		}
+
+		.cabecera {
+			background-image: url('imagenes/fondo_gris.gif');
+			background-size: 1100px;
+			background-repeat: no-repeat;
+			border: 1px solid #000;
+			width: 100px;
+			height: 100px;
+			vertical-align: bottom;
+			font-weight: bold;
+			font-size: large;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+		}
+
+		tbody tr th{
+			font-size: large;
+			font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+			font-weight: bold;
+			vertical-align: bottom;
+			padding-bottom: 10px;
+		}
+
+		tbody tr.par:first-child td{
+			background-color: yellow;
+			vertical-align: bottom;
+			padding-bottom: 20px;
+			transition: background-color .3s;
+		}
+		
+
+		tbody tr:hover.par:first-child td{
+			background-color: blue;
+		}
+
+
+
+
+		tbody tr.par:nth-last-child(2) td{
+			background-color: rgb(123, 123, 42);
+			vertical-align: bottom;
+			padding-bottom: 20px;
+			transition: background-color .3s;
+		}
+		tbody tr:hover.par:nth-last-child(2) td{
+			background-color: purple;
+		}
+
+
+		tbody tr td{
+			background-color: lightgray;
+			vertical-align: bottom;
+			text-align: center;
+			padding-bottom: 20px;
+			transition: background-color .3s;
+		}
+		tbody tr:hover td{
+			background-color: green;
+		}
+
+		tbody th{
+			background-color: aquamarine;
+		}
+
+		th.euro{
+			background-image: url('imagenes/euro.png');
+			background-position: 5px 5px;
+			background-size: 20px;
+			background-repeat: no-repeat;
+		}
+		th.dolar{
+			background-image: url('imagenes/dolar.png');
+			background-position: 5px 5px;
+			background-size: 20px;
+			background-repeat: no-repeat;
+		}
+		th.libra{
+			background-image: url('imagenes/libra.png');
+			background-position: 5px 5px;
+			background-size: 20px;
+			background-repeat: no-repeat;
+		}
+		th.yen{
+			background-image: url('imagenes/yen.png');
+			background-position: 5px 5px;
+			background-size: 20px;
+			background-repeat: no-repeat;
+		}
+
+
+
+		
+		
+
+	</style>
+</head>
+<body>
+	<table summary="Tipos de cambio">
+		<thead>
+			<tr class="cabecera">
+				<th scope="col">Cambio</th>
+				<th scope="col">Compra</th>
+				<th scope="col">Venta</th>
+				<th scope="col">Máximo</th>
+				<th scope="col">Mínimo</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr class="par">
+				<th scope="row" class="euro">Euro/Dolar</th>
+				<td>1.2524</td>
+				<td>1.2527</td>
+				<td>1.2539</td>
+				<td>1.2488</td>
+			</tr>
+			<tr>
+				<th scope="row" class="dolar">Dolar/Yen</th>
+				<td>119.01</td>
+				<td>119.05</td>
+				<td>119.82</td>
+				<td>119.82</td>
+			</tr>
+			<tr class="par">
+				<th scope="row" class="libra">Libra/Dolar</th>
+				<td>1.8606</td>
+				<td>1.8611</td>
+				<td>1.8651</td>
+				<td>1.8522</td>
+			</tr>
+			<tr>
+				<th scope="row" class="yen">Yen/Euro</th>
+				<td>0.6711</td>
+				<td>0.6705</td>
+				<td>0.6676</td>
+				<td>0.6713</td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>

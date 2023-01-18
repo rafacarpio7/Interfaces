@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Ejercicio 4 de Flexbox</title>
+	<link rel="stylesheet" href="./Ejercicio 3.css">
+	<style>
+
+	body {
+      background-color: aquamarine;
+      font-family: sans-serif;
+    }
+    ul, li {
+      padding: 0; 
+      list-style: none;
+    }
+    ul {
+      display: flex;
+      margin: 10px;
+      margin-top: 0;
+      background-color: aquamarine;
+
+	  width:1000px;
+	  height: 600px;
+    }
+    li {
+      display: block;
+      width: 200px;
+      height: 200px;
+      background-color: orangered;
+	  border: 2px solid blue;
+      line-height: 70px;
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      color: #fff;
+	  text-align: center;
+      
+    }
+
+	ul:nth-child(1){
+		flex-wrap: wrap-reverse;
+	}
+
+
+	ul:nth-child(2){
+		flex-wrap: wrap-reverse;
+		column-gap: 30px;
+		
+	}
+	ul:nth-child(2) li:nth-child(5){
+		margin-left: 350px;
+		margin-top: 200px;
+	}
+	</style>
+</head>
+<body>  	
+	<ul class="flex-container">
+		<li class="item" id="item1">1</li>
+		<li class="item" id="item2">2</li>
+		<li class="item" id="item3">3</li>
+		<li class="item" id="item4">4</li>
+		<li class="item" id="item5">5</li>
+	</ul>
+	
+	<ul class="flex-container">
+		<li class="item" id="item1">1</li>
+		<li class="item" id="item2">2</li>
+		<li class="item" id="item3">3</li>
+		<li class="item" id="item4">4</li>
+		<li class="item" id="item5">5</li>
+	</ul>
+</body>
+</html>
