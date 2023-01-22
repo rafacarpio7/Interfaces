@@ -2,7 +2,75 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<link href="Ejercicio 8.css" rel="stylesheet" type="text/css">
+	<style>
+		* {
+      padding: 0;
+      margin: 0;
+    }
+	body{
+		padding-top: 30px;
+	}
+
+    #flexcontainer {
+      border: 1px solid black;
+      width: 100%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      padding: 20px;
+      margin: auto;
+    }
+
+    header,footer {
+      display: flex;
+      border: 1px solid black;
+      padding: 10px;
+    }
+
+    #subcontainer {
+      border: 1px solid black;
+      width: 100%;
+      max-width: 980px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 10px;
+      margin: 10px 0 10px 0;
+    }
+
+    aside {
+      border: 1px solid black;
+      display: flex;
+      width: 400px;
+      height: 100px;
+    }
+
+    article {
+      border: 1px solid black;
+      display: flex;
+      width: 400px;
+      height: 200px;
+      margin-top: 120px;
+      margin-left: -180px;
+      margin-right: 20px;
+    }
+
+    main {
+      border: 1px solid black;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+  
+    }
+    .caja-flex {
+      border: 1px dotted blue;
+      margin: 20px;
+      min-height: 40px;
+      width: 150px;
+    }
+	</style>
 </head>
 <body>
 	<div id="flexcontainer">

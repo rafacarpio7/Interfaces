@@ -1,0 +1,74 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+
+  header{
+    display: flex;
+    padding: 1% 1% 1% 1%;
+    background-color: grey;
+    width: 1600px;
+    height: 70px;
+   
+  }
+  footer{
+    display: flex;
+    padding: 1% 1% 1% 1%;
+    background-color: cornflowerblue;
+    width: 1600px;
+    height: 70px;
+
+  }
+
+  header > div{
+    display: flex;
+    background-color: burlywood;
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+  
+
+  footer > div{
+    display: flex;
+    background-color: burlywood;
+    width: 70px;
+    height: 70px;
+    border: 1px solid black;
+    align-items: center;
+    padding-left: 20px;
+  }
+
+
+  header div:nth-child(1){
+    order: 4;
+    flex-grow: 5;
+  }
+  header div:nth-child(2){
+    order: 1;
+    flex-grow: 5;
+  }
+  header div:nth-child(3){
+    order: 2;
+    flex-grow: 7;
+  }
+  header div:nth-child(4){
+    order: 3;
+    flex-grow: 10;
+  }
+
+  footer div:nth-child(1){
+    flex-grow: 1;
+  }
+
+  footer div:nth-child(2){
+    flex-grow: 2;
+  }
+
+  footer div:nth-child(3){
+    flex-grow: 1;
+  }
