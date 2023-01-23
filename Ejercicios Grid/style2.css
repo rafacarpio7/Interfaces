@@ -1,0 +1,62 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+#grid_contenedor{
+    margin: 20px;
+    display: grid;
+    grid-template: 100px / 100px 300px;
+}
+/*GRID 1*/
+#grid1{
+    display: grid;
+    background-color: pink;
+    grid-template: 50px 50px/ 50px 50px;
+}
+#grid1 div{
+    background-color: gray;
+    border: 1px solid black;
+    text-align: center;
+}
+#grid1 div:nth-child(1){
+    align-self: start;
+    justify-self: start;
+}
+#grid1 div:nth-child(2){
+    align-self: start;
+    justify-self: end;
+}
+#grid1 div:nth-child(3){
+    align-self: flex-start
+}
+#grid1 div:nth-child(4){
+    align-self: end;
+    justify-self: start;
+}
+/*GRID 2*/
+#grid2{
+    display: grid;
+    background-color: yellow;
+    grid-template: 50px 50px/ 50px 50px;
+    /*Faltan estilos*/
+    justify-content: space-evenly;
+}
+#grid2 div{
+    background-color: lightblue;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 15px;
+}
+
+#grid2 div:nth-child(2){
+    align-self: start;
+    justify-self: end;
+    
+}
+#grid2 div:nth-child(3){
+    align-self: start;
+    justify-self: ;
+}
+#grid2 div:nth-child(4){
+   align-self: end;
+}
