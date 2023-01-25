@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1>Flexbox</h1>
+
+    <h2>¿Qué es?</h2>
+    <p>Es un sitema de elementos flexibles en la que los elementos HTML se adaptan y colocan automáticamente y de una
+        forma más sencilla que los métodos de posicionamiento habituales (static, absolute...)</p>
+
+    <h2>¿Comó se utiliza?</h2>
+    <p>Para activar el <b>flexbox</b> solo es necesario añadir la propiedad <b>display</b> al elemento contenedor de los
+        elementos que se quieren colocar.</p>
+    <p>A parte de otros esta propiedad tiene los valores:
+    <ul>
+        <li><b>flex</b>: establece un contenedor de items flexible en bloque e iguala su ancho al del contenedor
+            pricipal.</li>
+        <li><b>inline-flex</b>: establece un contenedor de items flexible en línea e iguala su ancho a la suma del ancho
+            de los items contenidos.</li>
+    </ul>
+    </p>
+    <p>Una vez activado el <b>flexbox</b> se le pueden añadir más propiedades para cambiar la forma en la que se colocan
+        los
+        items contenidos. Hay propiedades tanto para el elemento contenedor como para los elemenos contenidos.</p>
+
+    <h2>Propiedades del elemento contenedor</h2>
+
+    <h3>flex-direction</h3>
+    <p>Los contenedores flexibles tendrán un eje pricipal para poder
+        orientar los items contenidos (por defecto el horizontal), y un eje secundario que será perpendicular al
+        principal (por defecto el vertical).</p>
+    <p>La propiedad <b>flex-direction</b> sirve para cambiar la dirección del eje principal.</p>
+
+    <!-- Ejemplo de flex-direction -->
+    <label>flex-direction:</label>
+    <select name="flex-direction" id="select_fd">
+        <option value=""></option>
+        <option value="row">row</option>
+        <option value="row-reverse">row-reverse</option>
+        <option value="column">column</option>
+        <option value="column-reverse">column-reverse</option>
+    </select>
+    <br>
+    <br>
+    <div id="div_fd" class="contenedor" style="align-items: baseline;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>flex-wrap</h3>
+    <p>La propiedad <b>flex-wrap</b> sirve para especificar el comportamiento del contenedor en cuanto al desborde, y
+        como se desbordará en caso de que se pueda</p>
+
+    <!-- Ejemplo de flex-wrap -->
+    <label>flex-wrap:</label>
+    <select name="flex-wrap" id="select_fw">
+        <option value=""></option>
+        <option value="nowrap">nowrap</option>
+        <option value="wrap">wrap</option>
+        <option value="wrap-reverse">wrap-reverse</option>
+    </select>
+    <br>
+    <br>
+    <div id="div_fw" class="contenedor" style="align-items: baseline;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h3>column-gap</h3>
+    <p>La propiedad <b>column-gap</b> sirve para especificar la separación entre items en el eje principal</p>
+
+    <!-- Ejemplo de column-gap -->
+    <label>column-gap:</label>
+    <input type="number" name="input_cg" id="input_cg" min="0">
+    <span>px</span>
+    <br>
+    <br>
+    <div id="div_cg" class="contenedor estrecho" style="align-items: baseline;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>row-gap</h3>
+    <p>La propiedad <b>row-gap</b> sirve para especificar la separación entre items en el eje secundario</p>
+
+    <!-- Ejemplo de row-gap -->
+    <label>row-gap:</label>
+    <input type="number" name="input_rg" id="input_rg" min="0">
+    <span>px</span>
+    <br>
+    <br>
+    <div id="div_rg" class="contenedor" style="align-items: baseline; flex-wrap: wrap; align-content: center;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h3>justify-content</h3>
+    <p>La propiedad <b>justify-content</b> sirve para alinear los items en el eje principal</p>
+
+    <!-- Ejemplo de justify-content -->
+    <label>justify-content:</label>
+    <select name="justify-content" id="select_jc">
+        <option value=""></option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+    </select>
+    <br>
+    <br>
+    <div id="div_jc" class="contenedor estrecho" style="align-items: baseline;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>align-items</h3>
+    <p>La propiedad <b>align-items</b> sirve para alinear los items en el eje secundario</p>
+
+    <!-- Ejemplo de align-items -->
+    <label>align-items:</label>
+    <select name="align-items" id="select_ai">
+        <option value=""></option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="stretch">stretch</option>
+        <option value="baseline">baseline</option>
+    </select>
+    <br>
+    <br>
+    <div id="div_ai" class="contenedor">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>align-content</h3>
+    <p>La propiedad <b>align-content</b> sirve para lo mismo que la propiedad anterior, solo que en contenedores
+        multilínea (flex-wrap: wrap). No funcinará de otra manera.</p>
+
+    <!-- Ejemplo de align-content -->
+    <label>align-content:</label>
+    <select name="align-content" id="select_ac">
+        <option value=""></option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="space-between">space-between</option>
+        <option value="space-around">space-around</option>
+        <option value="space-evenly">space-evenly</option>
+        <option value="stretch">stretch</option>
+    </select>
+    <br>
+    <br>
+    <div id="div_ac" class="contenedor" style="flex-wrap: wrap;">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+    <h2>Propiedades de los elementos contenidos</h2>
+
+    <h3>align-self</h3>
+    <p>La propiedad <b>align-self</b> sirve para alinear un item en concreto en el eje secundario</p>
+
+    <!-- Ejemplo de align-self -->
+    <label><b>div2</b> align-self:</label>
+    <select name="align-self" id="select_as">
+        <option value=""></option>
+        <option value="flex-start">flex-start</option>
+        <option value="flex-end">flex-end</option>
+        <option value="center">center</option>
+        <option value="stretch">stretch</option>
+        <option value="baseline">baseline</option>
+        <option value="auto">auto</option>
+    </select>
+    <br>
+    <br>
+    <div class="contenedor" style="align-items: baseline;">
+        <div class="item">1</div>
+        <div id="div_as" class="item">2</div>
+        <div class="item">3</div>
+    </div>
+
+    <h3>flex-basis</h3>
+    <p>La propiedad <b>flex-basis</b> sirve para especificar el tamaño por defecto que tomarán los items en el eje
+        principal, antes de aplicar la ditribución de espacio.</p>
+
+    <!-- Ejemplo de flex-basis -->
+    <label>flex-basis</label>
+    <select name="flex-basis" id="select_fb">
+        <option value=""></option>
+        <option value="25%">25%</option>
+        <option value="200px">200px</option>
+        <option value="auto">auto</option>
+    </select>
+    <br>
+    <br>
+    <div class="contenedor estrecho" style="align-items: baseline;">
+        <div id="div_fb" class="item">1</div>
+    </div>
+
+    <h3>flex-grow</h3>
+    <p>La propiedad <b>flex-grow</b> sirve para indicar el factor de crecimiento en el eje principal de los items. Por
+        defecto es 0 para todos los items, por lo que tendrán todos el mismo tamaño, pero si se aumenta el de uno, esté
+        será más grande que los demás.</p>
+    <p>En el caso de que exista un elemento con <b>flex-grow</b> mayor a 0, este tratará de ocupar todo el espacio
+        disponible.</p>
+
+    <!-- Ejemplo de flex-grow -->
+    <label><b>div1</b> flex-grow:</label>
+    <input type="number" name="input01_fg" id="input01_fg" min="0">
+    <label><b>div2</b> flex-grow:</label>
+    <input type="number" name="input02_fg" id="input02_fg" min="0">
+    <label><b>div3</b> flex-grow:</label>
+    <input type="number" name="input03_fg" id="input03_fg" min="0">
+    <br>
+    <br>
+    <div class="contenedor estrecho" style="align-items: baseline;">
+        <div id="div01_fg" class="item">1</div>
+        <div id="div02_fg" class="item">2</div>
+        <div id="div03_fg" class="item">3</div>
+    </div>
+
+    <h3>flex-shrink</h3>
+    <p>La propiedad <b>flex-shrink</b> sirve para indicar el factor de decrecimiento en el eje principal de los items.
+        Funciona justo al contrario que la propiedad anterior, cuanto mayor es el valor, más pequeño será el item.</p>
+    <p>En el caso de que el valor de <b>flex-shrink</b> sea 0, los items se ajustarán al ancho especificado</p>
+
+    <!-- Ejemplo de flex-shrink -->
+    <label><b>div1</b> flex-shrink:</label>
+    <input type="number" name="input01_fs" id="input01_fs" min="0">
+    <label><b>div2</b> flex-shrink:</label>
+    <input type="number" name="input02_fs" id="input02_fs" min="0">
+    <label><b>div3</b> flex-shrink:</label>
+    <input type="number" name="input03_fs" id="input03_fs" min="0">
+    <br>
+    <br>
+    <label><b>div4</b> flex-shrink:</label>
+    <input type="number" name="input04_fs" id="input04_fs" min="0">
+    <label><b>div5</b> flex-shrink:</label>
+    <input type="number" name="input05_fs" id="input05_fs" min="0">
+    <label><b>div6</b> flex-shrink:</label>
+    <input type="number" name="input06_fs" id="input06_fs" min="0">
+    <br>
+    <br>
+    <div class="contenedor estrecho" style="align-items: baseline;">
+        <div id="div01_fs" class="item">1</div>
+        <div id="div02_fs" class="item">2</div>
+        <div id="div03_fs" class="item">3</div>
+        <div id="div04_fs" class="item">4</div>
+        <div id="div05_fs" class="item">5</div>
+        <div id="div06_fs" class="item">6</div>
+    </div>
+
+    <h3>order</h3>
+    <p>La propiedad <b>order</b> sirve para especificar el orden en el que se colocará cada item, cuanto mayor sea el
+        valor, más atrás se colocará</p>
+
+    <!-- Ejemplo de order -->
+    <label><b>div1</b> order:</label>
+    <input type="number" name="input01_o" id="input01_o" min="0">
+    <label><b>div2</b> order:</label>
+    <input type="number" name="input02_o" id="input02_o" min="0">
+    <label><b>div3</b> order:</label>
+    <input type="number" name="input03_o" id="input03_o" min="0">
+    <br>
+    <br>
+    <div class="contenedor estrecho" style="align-items: baseline;">
+        <div id="div01_o" class="item">1</div>
+        <div id="div02_o" class="item">2</div>
+        <div id="div03_o" class="item">3</div>
+    </div>
+
+    <h2>Atajos</h2>
+    <p>Algunas de las propiedades de flexbox pueden especificarse juntas para no tener que escribir tantas lineas de
+        css.</p>
+    <ul>
+        <li><b>flex-flow</b>: sirve para juntar <b>flex-direction</b> y <b>flex-wrap</b> (<span>flex-flow:
+                &lt;flex-direction&gt; &lt;flex-wrap&gt;</span>)</li>
+        <li><b>flex</b>: sirve para juntar <b>flex-grow</b>, <b>flex-shrink</b> y <b>flex-basis</b> (<span>flex:
+                &lt;flex-grow&gt; &lt;flex-shrink&gt; &lt;flex-basis&gt;</span>)</li>
+        <li><b>gap</b>: sirve para juntar <b>column-gap</b> y <b>row-gap</b> (<span>gap: &lt;column-gap&gt; &lt;row-gap&gt;</span>)</li>
+    </ul>
+</body>
+
+</html>

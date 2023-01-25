@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EJEMPLOS</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+        #contenedor{
+            background-color: black;
+        }
+
+        .caja{
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        /* PRIMERA CAJA */
+        #contenedor div:nth-child(1){
+            background-color: silver;
+        }
+
+        /* SEGUNDA CAJA */
+        #contenedor div:nth-child(2){
+            background-color: blue;
+        }
+
+        /* TERCERA CAJA */
+        #contenedor div:nth-child(3){
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div class="caja"></div>
+        <div class="caja"></div>
+        <div class="caja"></div>
+    </div>
+</body>
+</html>
