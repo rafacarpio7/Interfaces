@@ -1,0 +1,67 @@
+body{
+	margin: 0;	
+}
+
+.container {
+	display: grid;
+	height: 100vh;
+	grid-template-columns: repeat(14, 1fr);
+	grid-template-rows: 20vh 20vh 20vh 20vh;
+	
+	grid-template-areas: 
+    ". . . . header header header header header header header . . ."
+	"aside . imgGrande imgGrande imgGrande imgGrande imgGrande imgGrande imgGrande cielo cielo cielo cielo cielo "
+	"aside . img1 img1 img1 img1 img2 img2 img2 img2 img3 img3 img3  img3"
+	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
+	
+	;
+	grid-gap: 5px;
+
+}
+
+.item {
+	background: #89ece1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.container > header {
+	grid-area:header ;
+}
+
+.container > main {
+	grid-area: main;
+}
+
+.container > article{
+    grid-area: article;
+}
+
+.container > aside {
+	grid-area: aside;
+}
+
+.container > section {
+	grid-area: section;
+}
+.imgGrande{
+    grid-area: imgGrande;
+}
+
+.cielo {
+	grid-area: cielo;
+}
+.img1 {
+	grid-area: img1;
+}
+.img2 {
+	grid-area: img2;
+}
+.img3 {
+	grid-area: img3;
+}
+
+.container > footer {
+	grid-area: footer;
+}

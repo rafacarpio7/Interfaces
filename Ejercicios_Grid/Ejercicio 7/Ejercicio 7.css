@@ -1,0 +1,22 @@
+body{
+	margin:0;
+}
+
+.wrapper{
+	width: 700px;
+	display: grid;
+	grid-template: repeat(2, 9rem) / repeat(6, 2.5rem) repeat(2, 6rem);
+	grid-gap: 5px;
+	background-color: aqua;
+	grid-auto-flow: column;
+	
+}
+
+.item{
+	background: darkblue;
+	color: white;
+	display: flex;
+
+}
+
+
