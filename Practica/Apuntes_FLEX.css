@@ -1,0 +1,82 @@
+#flexbox {
+    /*
+    La propiedad "justify-content" alinea elementos horizontalmente.
+    */
+    justify-content: flex-start;    /* Principio */
+    justify-content: flex-end;      /* Final */
+    justify-content: center;        /* Centrar */
+    justify-content: space-between; /* Distancia entre elementos (no cuenta el padre) */
+    justify-content: space-around;  /* Separación alrededor (si cuenta el padre) */
+
+
+
+    /*
+    La propiedad "align-items" alinea elementos verticalmente
+    */
+    align-items: flex-start;        /* Superior */
+    align-items: flex-end;          /* Inferior */
+    align-items: center;            /* Centrar */
+    align-items: baseline;          /* Base del contenedor */
+    align-items: stretch;           /* Los elementos se estiran */
+
+
+
+    /*
+    La propiedad "align-self" es como "align-items" pero individial
+    */
+    align-self: flex-start;         /* Superior */
+    align-self: flex-end;           /* Inferior */
+    align-self: center;             /* Centrar */
+    align-self: baseline;           /* Base del contenedor */
+    align-self: stretch;            /* Los elementos se estiran */
+
+
+
+    /*
+    La propiedad "align-content" determina el espacio entre líneas.
+        --> ATENCIÓN! La propiedad "align-items" determina como los elementos en su conjunto están alineados
+            dentro del contenedor. Cuando hay solo una línea, align-content no tiene efecto.
+    */
+    align-content: flex-start;      /* Principio */
+    align-content: flex-end;        /* Final*/
+    align-content: center;          /* Centrar */
+    align-content: space-between;   /* Distancia entre elementos (no cuenta el padre) */
+    align-content: space-around;    /* Separación alrededor (si cuenta el padre) */
+    align-content: space-evenly;    /* Separación equidistante */
+    align-content: stretch;         /* Los elementos se estiran */
+
+
+
+    /*
+    La propiedad "flex-direction" define la dirección de los elementos
+        --> ATENCION! Cuando es una columna, "justify-content" cambia a vertical y "align-items" a horizontal.
+    */
+    flex-direction: row;            /* Fila */
+    flex-direction: row-reverse;    /* Fila invertida */
+    flex-direction: column;         /* Columna */
+    flex-direction: column-reverse; /* Columna invertida*/
+
+
+
+    /*
+    La propiedad "flex-wrap" especifica si los elementos se fuerzan en una línea o en múltiples
+    */
+    flex-wrap: nowrap;              /* Línea singular (default) */
+    flex-wrap: wrap;                /* Multilínea */
+    flex-wrap: wrap-reverse;        /* Multilínea invertida*/
+
+
+
+    /*
+    La propiedad "flex-flow" junta las cualidades de "flex-direction" y "flex-wrap"
+    */
+    flex-flow: column wrap;         /* Combinación de ambos */
+    /* flex-flow: ...; */
+
+
+
+    /*
+    La propiedad "order" redefine el orden del elemento
+    */
+    order: 1;                       /* Número + - */
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*¡IMPORTANTE lee el siguiente comentario, para poder ENTENDERLO BIEN, es preferible leer TODOS los comentarios!*/
+        /*Para toda la explicacion excepto en algunos casos especificos en los cuales se indica, cada O representa un elemento */
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #transformado{
+            transform: translate(); /*Mueve con respecto al centro de nuestro elemento, se puede mover en los ejes x y z*/
+
+            transform: scale();     /*Sirve para escalar un elemento si, solo pones un valor a scale, se aplcia a x y, 
+                                    pero si pones dos valores, el primero correspone con x y el segundo con y*/
+
+            transform: rotate();    /*Rota el elemento, se puede poner (valor turn) que rota en funcion de una vuelta, ejemplo:
+                                    rotate(0,25 turn), rotara un cuarto de vuelta. 
+                                    Pero tambien se puede poner con grados (valor deg), ejemplo: 
+                                    rotate(90 deg), rotara un cuarto de vuelta*/
+                            
+            /*Si centras utilizando  top y left 50%, tambien tienes k poner un:*/
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="transformado"></div>
+</body>
+</html>

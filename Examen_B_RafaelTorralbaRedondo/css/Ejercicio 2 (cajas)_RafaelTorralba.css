@@ -1,0 +1,49 @@
+*{
+
+}
+
+li::marker{
+    
+    font-weight: bold;
+}
+
+li{
+    list-style: upper-roman;
+}
+
+.padre{
+    padding: 11px;
+    height: 65%;
+    width: 65%;
+    border: 1px solid black;
+}
+
+.blue {
+    
+    width: 48.6%;
+    height: 170px;
+    border: 1px dotted blue;
+    float: left;
+}
+
+
+
+.blue:nth-child(1){
+    margin-left: 11px;
+    margin-bottom: 11px;
+    margin-top: 11px;
+}
+
+.blue:nth-child(2){
+    margin-bottom: 11px;
+    margin-top: 11px;
+
+}
+
+.red{
+    clear: both;
+    margin: 11px 11px 11px 11px;
+    width: 97.4%;
+    height: 170px;
+    border: 1px dotted red;
+}

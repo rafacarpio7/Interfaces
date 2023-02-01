@@ -1,0 +1,157 @@
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--fondoPrimario: #FCF7F8;
+	--colorOscuro: #1A1E21;
+	--azul: #3860EC;
+}
+
+body {
+	background: var(--fondoPrimario);
+	font-family: 'Roboto', sans-serif;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+}
+
+ul {
+	margin: 0;
+}
+
+.contenedor {
+	max-width: 500px;
+	width: 90%;
+	padding: 30px;
+	border-radius: 20px;
+}
+
+.titulo {
+	font-size: 20px;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--colorOscuro);
+	margin-bottom: 20px;
+}
+
+.grupo {
+	padding: 60px 0;
+	border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+.grupo div p,
+.grupo div div,
+.grupo div span,
+.grupo ul li {
+	background: #dbdbdb;
+	padding: 10px;
+}
+
+/* ? ------------- PSEUDO-CLASES ------------- */
+.enlace:active { /*Cuando le des click cambiará el color*/
+	background: #000;
+}
+
+.enlace:link { /*Cambia el estado del enlace cuando no hemos entrado*/
+	color: blue;
+}
+
+.enlace:visited { /* Si lo has visitado lo cambias*/
+	color: #b1b1b1;
+}
+
+.enlace:hover {
+	color: orange;
+}
+
+
+/* ? --- --- --- --- PARRAFOS --- --- --- --- */
+/* Seleccionar el primer elemento de un contenedor o el último*/
+.parrafos p:first-child {
+	background: var(--azul); /*Es una variable que contiene azul pero le puedes poner background*/
+	color: #fff;
+}
+
+.parrafos p:last-child {
+	background: #000;
+	color: #fff;
+}
+
+
+/* ? --- --- --- --- ELEMENTOS --- --- --- --- */
+.elementos p:first-of-type { /*Quiero acceder al elemento parrafos, al primero*/
+	background: var(--azul);
+	color: #fff;
+}
+
+.elementos div:last-of-type {
+	background: #000;
+	color: #fff;
+}
+
+
+/* ? --- --- --- --- LISTA --- --- --- --- */
+/*Nos permite cual elemento podemos aplicarle el css, el primero, segundo, los pares... etc*/
+.lista :nth-child(2){
+	background: var(--azul);
+	color: #fff;
+}
+
+.lista :nth-last-child(3){
+	background: #000;
+	color: #fff;
+}
+    /*Impares*/
+/* .lista :nth-child(odd){ 
+	background: var(--azul);
+	color: #fff;
+} */
+    /*Pares*/
+/* .lista :nth-child(even){ 
+	background: var(--azul);
+	color: #fff;
+} */
+
+    /*Cada 3 elementos*/
+/* .lista :nth-child(3n){ 
+	background: var(--azul);
+	color: #fff;
+} */
+
+
+/* ? --- --- --- --- LISTA 2 --- --- --- --- */
+/*Es una combinacion de nth-child y first-of-type (seleccionar los parrafos dependiento de su nº)*/
+.lista2 p:nth-of-type(2) { /*No es el segundo elemento de la lista, es el segundo párrafo*/
+	background: var(--azul);
+	color: #fff;
+}
+
+.lista2 div:nth-last-of-type(2) {
+	background: #000;
+	color: #fff;
+}
+
+
+/* ? --- --- --- --- LISTA 3 --- --- --- --- */
+/* Aplicar estilos css a un elemento pero solo si es el hijo de una lista o contenedor*/
+/*Si el parrafo de lista 3 es el unico hijo, aplica el estilo, (si agregas otro parrafo ya no se aplican, porque ya hay 2 hijos*/
+.lista3 p:only-child {
+	background: var(--azul);
+	color: #fff;
+}
+
+
+/* ? --- --- --- --- LISTA 4 --- --- --- --- */
+/*Lo que hace es seleccionar solo los estilos para los párrafos*/
+.lista4 p:only-of-type {
+	background: var(--azul);
+	color: #fff;
+}

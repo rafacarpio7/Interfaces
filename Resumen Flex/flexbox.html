@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*¡IMPORTANTE lee el siguiente comentario, para poder ENTENDERLO BIEN, es preferible leer TODOS los comentarios!*/
+        /*Para toda la explicacion excepto en algunos casos especificos en los cuales se indica, cada O representa un ellemento hijo diferente y el padre esta delimitado por || */
+
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        #contenedor{
+            display: flex;                  /*Obligatorio si quieres usar flexbox*/
+
+            /*Explicacion y posibles valores para justify-content, justify-items y justify-self*/
+
+            /*Valor por defecto*/
+            justify-content: flex-start;    /*Se colocan los elementos al inicio del contenedor |O--------------| */
+
+            justify-content: flex-end;      /*Se colocan los elementos al final del contenedor |--------------O| */
+
+            justify-content: center;        /*Se colocan los elementos en el centro del contenedor |-------O-------| */
+
+            justify-content: space-between; /*Se colocan los elementos de la siguiente manera: |O------O------O| 
+                                            El primer y ultimo elemento se colon al inicio y al final del contenedor y el resto se divide de manera equitativa*/
+
+            justify-content: space-around;  /*Se colocan los elementos de la siguiente manera: |--O----O----O--| 
+                                            El mismo espacio a la izquiera y a la derecha del coumento*/
+
+            justify-content: space-evenly;  /*Se colocan los elementos de la siguiente manera: |---O---O---O---|   
+                                            Se divide todo el espacio de manera equitativa, empezando y acabando con huecos en blanco*/
+            
+            /*Explicacion y posibles valores para align-content, align-items y align-self*/
+
+            /*Valor por defecto*/
+            align-items: flex-start;        /*Los elementos se colocan al inicio del contenedor: |O--|   
+                                                                                                 |---| 
+                                                                                                 |---| */
+
+            align-items: flex-end           /*Los elementos se colocan al final del contenedor: |--O|   
+                                                                                                |---| 
+                                                                                                |---| */;
+
+            align-items: center             /*Los elementos se colocan en el centro del contenedor: |---|   
+                                                                                                    |-O-| 
+                                                                                                    |---| */;
+
+            align-items: baseline;          /*Los elementos se colocan en la línea base del contenedor: |-1-| En este caso exclusivamente cada numero representa un elemento hijo
+                                                                                                        |O12| 
+                                                                                                        |-1-| */;
+
+            align-items: stretch            /*Los elementos se expanden hasta ocupar todo el contenedor: |O| */;
+            
+            /*Diferencia entre content, items y self*/
+            /*
+            SE USA EN EL PADRE
+            content: se aplica cuando en el caso de justify, hay mas de un elemento en la misma fila, en el caso de align, cuando hay mas de un elemento en la misma columna
+            items: se aplica cuando en el caso de justify, hay solo un elemento en la misma fila, en el caso de align, cuando hay mas de un elemento en la misma columna
+
+            SE USA EN EL ELEMENTO QUE QUIERES MOVER
+            self: sirve para mover el propio elemento
+            */
+
+            /*Explicacion y posibles valores para flex-direction ¡En este caso exclusivamente cada numero representa un elemento hijo!*/
+
+            /*Valor por defecto*/
+            flex-direction: row;            /*Los elementos se distribuyen en filas: |123|   
+                                                                                     |---| 
+                                                                                     |---| */;
+
+            flex-direction: row-reverse;    /*Los elementos se distribuyen en filas de manera invertida: |321|   
+                                                                                                         |---| 
+                                                                                                         |---| */;
+
+            flex-direction: column;         /*Los elementos se distribuyen en columnas: |1--|   
+                                                                                        |2--| 
+                                                                                        |3--| */;
+
+            flex-direction: column-reverse; /*Los elementos se distribuyen en columnas de manera invertida: |3--|   
+                                                                                                            |2--| 
+                                                                                                            |1--| */;
+            row-gap: 10px;                  /*Indica el espacio entre filas*/
+            column-gap: 10px;               /*Indica el espacio entre columnas*/
+
+            /*Explicacion y valores para order*/
+
+            /*Valor por defecto*/
+            order: 0;
+
+            /*Si es el numero introducido en order es menor que el de los otros elementos, este se desplaza a la izquierda, si es mayor se desplaza a la derecha
+            Para este ejemplo los numeros k representan los hijos, son los valores que tiene order
+            ¡IMPORTANTE se pueden usar numero positivos y negativos!
+            Ejemplo 1:
+            |014|
+            Ejemplo2:
+            |122|*/
+
+            /*Explicacion y posibles valores para flex-wrap*/
+
+            /*Valor por defecto*/
+            flex-wrap: nowrap;              /*Todos los elementos se ajustan en la misma linea*/
+
+            flex-wrap: wrap;                /*Los elementos se dividen en varias lineas, segun van ocupando todo el espacio de la linea anterior*/
+
+            flex-wrap: wrap-reverse;        /*Los elementos se dividen en varias lineas, segun van ocupando todo el espacio de la linea anterior, pero de manera inversa*/
+
+            /*Explicacion y posibles valores para flex-flow*/
+            /*Valor por defecto*/
+            flex-flow: row nowrap;          /*Sirve para hacer flex-direction y flex-wrap a la vez, y su nomenclatura es flex-flow: valor de flex-direction  valor de flex-wrap;*/
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="hijo1"></div>
+        <div id="hijo2"></div>
+        <div id="hijo3"></div>
+        <div id="hijo4"></div>
+        <div id="hijo5"></div>
+    </div>
+</body>
+</html>

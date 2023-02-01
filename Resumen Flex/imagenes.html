@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    /* Imagen solo en el elemento */
+/* p {
+  background-image: url('./cr7.jpeg');
+} */
+ 
+ /*Todo el body, ocupa el tamaño de la imagen y la repite hasta rellenarlo*/
+
+/* body {
+  background-image: url('./cr7.jpeg');
+} */
+
+/*Evita que se repita*/
+/* body {
+  background-image: url('./cr7.jpeg');
+  background-repeat: no-repeat;
+} */
+
+/*La expande por todo el elemento body*/
+/* body {
+  background-image: url('./cr7.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+} */
+
+/*La ensancha a lo ancho y alto (cubre pero no se adapta) de todo el elemento*/
+body {
+  background-image: url('./cr7.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+/* BORDER IMAGE */
+
+.box {
+  border: 10px solid; /* establece un borde de 10px */
+  border-image: linear-gradient(to right, #ff0000, #ffff00) 1; /* aplica el gradiente lineal */
+}
+
+/* .box {
+  border: 10px solid; 
+  border-image: linear-gradient(to right, #ff0000, #ffff00, #00ff00) 1;
+} */
+
+.boxes {
+  border-radius: 50px;
+  border: 10px solid transparent;
+  border-image: linear-gradient(45deg, #ff0000, #ffff00) border-box;
+}
+</style>
+
+</head>
+<body>
+
+<h2 style="color: aqua;">LOREM IPSUM PARA TU CUERPO SERRANO</h2>
+
+<p>You can specify background images<br>
+for any visible HTML element.<br>
+In this example, the background image<br>
+is specified for a div element.<br>
+By default, the background-image<br>
+will repeat itself in the direction(s)<br>
+where it is smaller than the element<br>
+where it is specified. (Try resizing the<br>
+browser window to see how the<br>
+background image behaves.</p>
+
+<div class="box">
+    Contenido del elemento
+  </div>
+
+  <div class="boxes">
+    Contenido del elemento
+  </div>
+
+
+</body>
+</html>

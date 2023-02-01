@@ -1,0 +1,43 @@
+*{
+padding: 10%;
+}
+
+.cabecera{
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 960px;
+    height: 135px;
+    box-shadow: 10px 10px 20px blue;
+    padding: 10%;
+    background-image: url('/Examen_B_RafaelTorralbaRedondo/img/logo.png');
+    background-position:900px 110px; 
+	background-size: 150px;
+	background-repeat: no-repeat;
+    position: sticky;
+}
+
+p{
+    font-size: 50px;
+    font-weight: bold;
+    
+    
+    margin-top: 2%;
+    margin-left: 5%;
+    margin-bottom: 1%;
+    margin-right: 70%;
+}
+
+
+
+.texto{
+    margin-top: 10px;
+    font: caption;
+    padding-top: 5px;
+    padding-bottom: 2px;
+    border: 1px solid black;
+    height: 40%;
+    letter-spacing: 1px;
+    text-align: justify;
+    font-style: italic;
+    
+}

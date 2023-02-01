@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hijo{
+            /*Valor por defecto*/
+            overflow: visible;  /*El contenido no es recortado, podría ser dibujado fuera de la caja contenedora.*/
+
+            overflow: hidden;   /*El contenido es recortado y no se muestran barras de posición.*/
+
+            overflow: scroll;   /*El contenido es recortado y el navegador web usa las barras de desplazamiento, se haya recortado contenido o no.*/
+
+            overflow: auto;     /*El contenido es recortado y provee barras de desplazamiento si hay contenido excedente.*/
+        }
+    </style>
+</head>
+<body>
+    <div id="contenedor">
+        <img src="imagen.png" id="hijo">
+    </div>
+</body>
+</html>
