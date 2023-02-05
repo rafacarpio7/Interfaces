@@ -10,8 +10,8 @@ body{
 	
 	grid-template-areas: 
     ". . . . header header header header header header header . . ."
-	"aside . imgGrande imgGrande imgGrande imgGrande imgGrande imgGrande imgGrande cielo cielo cielo cielo cielo "
-	"aside . img1 img1 img1 img1 img2 img2 img2 img2 img3 img3 img3  img3"
+	"aside aside imgGrande imgGrande imgGrande imgGrande imgGrande imgGrande imgGrande cielo cielo cielo cielo cielo "
+	"aside aside img1 img1 img1 img1 img2 img2 img2 img2 img3 img3 img3  img3"
 	"footer footer footer footer footer footer footer footer footer footer footer footer footer footer"
 	
 	;
@@ -20,7 +20,8 @@ body{
 }
 
 .item {
-	background: #89ece1;
+	border: 1px solid black;
+	border-radius: 20px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
